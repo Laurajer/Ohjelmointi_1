@@ -8,11 +8,17 @@
 
 
 
-leiviska = input('Anna leiviskät: ')
-naula = input('Anna naulat: ')
-luoti = input('Anna luodit: ')
+leiviska_string = input('Anna leiviskät: ')
+naula_string = input('Anna naulat: ')
+luoti_string = input('Anna luodit: ')
 
-summa = float(leiviska) * 8512 + float(naula) * 425.6 + float(luoti) *13.3
+leiviska = float(leiviska_string) * 8512
+naula = float(naula_string) * 425.6
+luoti = float(luoti_string) * 13.3
 
+massa = leiviska + naula + luoti
+yhteispaino = massa / 1000
+yhteispaino_int = int(yhteispaino)
+ylijaama = int((yhteispaino - int(yhteispaino)) * 1000)
 
-print(summa)
+print('Massa nykymittojen mukaan on ' + str(yhteispaino_int) + ' kilogrammaa ja ' + str(ylijaama) + ' grammaa.')

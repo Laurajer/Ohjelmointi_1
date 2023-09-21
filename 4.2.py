@@ -2,13 +2,11 @@
 # kunnes käyttäjä antaa negatiivisen tuumamäärän.
 # Sen jälkeen ohjelma lopettaa toimintansa.
 
-tuuma = int(input('Anna tuumamäärä: '))
-sentit = float(tuuma) * 2.54
+tuumat = float(input('Anna tuumat: '))
 
-while int(tuuma) >= 0:
-    if int(tuuma) < 0:
-        break
+while 0 <= tuumat:
+    sentit = tuumat * 2.54
     print(sentit)
-    tuuma = int(input('Anna tuumamäärä:'))
+    tuumat = float(input('Anna tuumat: '))
 
-print('Ei sallittu')
+print('Annoit negatiivisen arvon.')
